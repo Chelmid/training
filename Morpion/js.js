@@ -6,18 +6,8 @@ const o = "O";
 
 //selection des joueurs
 
-//var jouer = prompt("Veuillez choisir")
-
-function choix(){
-	var x = "X"
-	var o = "O"
-
-	if(jouer == x){
-		return x
-	}else{
-		return o
-	}
-}
+var joueur1 = prompt("Veuillez choisir un symbole joueur 1")
+var joueur2 = prompt("Veuillez choisir un symbole joueur 2")
 
 
 // Selector
@@ -29,48 +19,48 @@ function verifier(){
 
 		// condition pour le X
 		if(true){
-			if(cases[0].innerHTML == "X" && cases[1].innerHTML == "X" && cases[2].innerHTML == "X"){
+			if(cases[0].innerHTML == joueur1 && cases[1].innerHTML == joueur1 && cases[2].innerHTML == joueur1){
 					console.log(cases[0].innerHTML,cases[1].innerHTML,cases[2].innerHTML)
-					alert(" X you win")
+					alert(" joueur 1 win")
 			}
-			if(cases[3].innerHTML == "X" && cases[4].innerHTML == "X" && cases[5].innerHTML == "X"){
+			if(cases[3].innerHTML == joueur1 && cases[4].innerHTML == joueur1 && cases[5].innerHTML == joueur1){
 					console.log(cases[3].innerHTML,cases[4].innerHTML,cases[5].innerHTML)
-					alert(" X you win")
+					alert(" joueur 1 win")
 			}
-			if(cases[6].innerHTML == "X" && cases[7].innerHTML == "X" && cases[8].innerHTML == "X"){
+			if(cases[6].innerHTML == joueur1 && cases[7].innerHTML == joueur1 && cases[8].innerHTML == joueur1){
 					console.log(cases[6].innerHTML,cases[7].innerHTML,cases[8].innerHTML)
-					alert(" X you win")
+					alert(" joueur 1 win")
 			}
-			if(cases[0].innerHTML == "X" && cases[4].innerHTML == "X" && cases[8].innerHTML == "X"){
+			if(cases[0].innerHTML == joueur1 && cases[4].innerHTML == joueur1 && cases[8].innerHTML == joueur1){
 					console.log(cases[0].innerHTML,cases[4].innerHTML,cases[8].innerHTML)
-					alert(" X you win")
+					alert(" joueur 1 win")
 			}
-			if(cases[2].innerHTML == "X" && cases[4].innerHTML == "X" && cases[6].innerHTML == "X"){
+			if(cases[2].innerHTML == joueur1 && cases[4].innerHTML == joueur1 && cases[6].innerHTML == joueur1){
 					console.log(cases[2].innerHTML,cases[4].innerHTML,cases[6].innerHTML)
-					alert(" X you win")
+					alert(" joueur 1 win")
 			}
 
 		// condition pour le O
 		if(true){
-			if(cases[0].innerHTML == "O" && cases[1].innerHTML == "O" && cases[2].innerHTML == "O"){
+			if(cases[0].innerHTML == joueur2 && cases[1].innerHTML == joueur2 && cases[2].innerHTML == joueur2){
 					console.log(cases[0].innerHTML,cases[1].innerHTML,cases[2].innerHTML)
-					alert(" O you win")
+					alert(" joueur 2 win")
 			}
-			if(cases[3].innerHTML == "O" && cases[4].innerHTML == "O" && cases[5].innerHTML == "O"){
+			if(cases[3].innerHTML == joueur2 && cases[4].innerHTML == joueur2 && cases[5].innerHTML == joueur2){
 					console.log(cases[3].innerHTML,cases[4].innerHTML,cases[5].innerHTML)
-					alert(" O you win")
+					alert(" joueur 2 win")
 			}
-			if(cases[6].innerHTML == "O" && cases[7].innerHTML == "O" && cases[8].innerHTML == "O"){
+			if(cases[6].innerHTML == joueur2 && cases[7].innerHTML == joueur2 && cases[8].innerHTML == joueur2){
 					console.log(cases[6].innerHTML,cases[7].innerHTML,cases[8].innerHTML)
-					alert(" O you win")
+					alert(" joueur 2 win")
 			}
-			if(cases[0].innerHTML == "O" && cases[4].innerHTML == "O" && cases[8].innerHTML == "O"){
+			if(cases[0].innerHTML == joueur2 && cases[4].innerHTML == joueur2 && cases[8].innerHTML == joueur2){
 					console.log(cases[0].innerHTML,cases[4].innerHTML,cases[8].innerHTML)
-					alert(" O you win")
+					alert(" joueur 2 win")
 			}
-			if(cases[2].innerHTML == "O" && cases[4].innerHTML == "O" && cases[6].innerHTML == "O"){
+			if(cases[2].innerHTML == joueur2 && cases[4].innerHTML == joueur2 && cases[6].innerHTML == joueur2){
 					console.log(cases[3].innerHTML,cases[4].innerHTML,cases[6].innerHTML)
-				alert(" O you win")
+				alert(" joueur 2 win")
 			}
 		}
 	}
@@ -84,7 +74,7 @@ console.log(cases);
 var t = 0;
 function tour(){
 	t++;
-	return t%2 ?"X" : "O";
+	return t%2 ? joueur1 : joueur2 ;
 }
 
 // function pour l'affichage
