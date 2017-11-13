@@ -42,11 +42,10 @@ function verifier(){
 			if(cases[2].innerHTML == joueur1 && cases[4].innerHTML == joueur1 && cases[6].innerHTML == joueur1){
 					console.log(cases[2].innerHTML,cases[4].innerHTML,cases[6].innerHTML)
 					alert(" joueur 1 avec les symboles "+ joueur1 +" win")
-					cases.innerHTML = ''
+					reset()
 			}
 
 		// condition pour le O
-		if(true){
 			if(cases[0].innerHTML == joueur2 && cases[1].innerHTML == joueur2 && cases[2].innerHTML == joueur2){
 					console.log(cases[0].innerHTML,cases[1].innerHTML,cases[2].innerHTML)
 					alert(" joueur 1 avec les symboles "+ joueur2 +" win")
@@ -73,7 +72,6 @@ function verifier(){
 				reset()
 			}
 		}
-	}
 }
 
 // action click sur les cases
@@ -89,15 +87,13 @@ function tour(){
 
 // function pour l'affichage
 function affichage(){
-	if(this.innerHTML = tour()){
-		cases.innerHTML = verifier()
-		reset()
-	/*if((cases.innerHTML = verifier()) == true){
-		cases.innerHTML = ""
-	}*/}
+	if(!this.innerHTML){
+			this.innerHTML = tour()
+			cases.innerHTML = verifier()
+		}
 }
 
 function reset(){
-			this.innerHTML = ''
-			console.log(cases)
-}
+	cases.forEach(element => element.innerHTML = '')
+	console.log(cases);
+	}
