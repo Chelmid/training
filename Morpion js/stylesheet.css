@@ -1,0 +1,35 @@
+.boite{
+  border: 5px solid blue;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.morpion {
+  border: 3px solid red;
+  height:50vh;
+  min-width:50vh;
+  background:yellow;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.case {
+  border:2px solid black; 
+  width:calc(1/3*100%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+html, body {
+ margin:0;
+ padding:0;
+ }
+ $carre-color:red
+#coucou {
+	 height:100px;
+	 width:100px;
+	 background-color:$carre-color;
+ }
+
